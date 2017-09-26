@@ -200,3 +200,44 @@ body {
     margin: 0px;
     margin-left: 2px;
 }
+.budge {
+    background-color: darkviolet;
+    color: white;
+    font-family: "Comic Sans MS";
+    font-size: 30px;
+    text-align: center;
+    padding: 15px;
+    font-weight: 700;
+    width: 120px;
+    height: 150px;
+    position: fixed;
+    bottom: -120px;
+    left: 230px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: 1s all ease;
+}
+.budge:hover {
+    background-color: blueviolet;
+    bottom: -25px;
+
+}
+.created {
+    font-size: 18px;
+}
+
+@media (max-width: 500px) {
+    .left {
+        width: 100%;
+    }
+    .right {
+        width: 100%;
+    }
+}
+@media print {
+    .budge {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+}
