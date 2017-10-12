@@ -5,58 +5,70 @@
     <title>b0nf1re</title>
 
 
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 <body>
-<div class="container">
-    <div class="center">
-        <div class="right main">
-            <div class="leave right-text">Залишилося</div>
-            <div class="chosen-products">
-                <span class="chosen-product">Помідори<span class="quantity-square orange">1</span></span>
-                <span class="chosen-product">Печиво<span class="quantity-square orange">1</span></span>
+<div class="background">
+    <div class="container">
+        <div class="right">
+            <div class="inner">
+                <div class="segment text">
+                    <h3 style="margin:0">Залишилося</h3>
+                </div>
+                <div class="segment items-left">
+                    <div class="products-holder">
+                        <template class="preview-template">
+                            <div class="product">
+                                <div class="label">Tomatoes</div>
+                                <div class="cirrcle-counter">1</div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+                <div class="segment text">
+                    <h3 style="margin:0">Куплено</h3>
+                </div>
+                <div class="segment items-bought">
+                    <template class="preview-template">
+                        <div class="product">
+                            <div class="label">Tomatoes</div>
+                            <div class="cirrcle-counter">1</div>
+                        </div>
+                    </template>
+                </div>
             </div>
-            <div class="bought right-text">Куплено</div>
-            <div class="bought-products"></div>
         </div>
-        <div class="left main">
-            <div class="adding"><textarea rows="1" placeholder="Назва товару..." class="textarea"></textarea>
-            <button type="button" value="Додати" class="button">Додати</button>
+        <div class="left">
+            <div class="inner">
+                <div class="segment form">
+                    <input class="input" type="text" placeholder="Назва товару..." width="100%">
+                    <button data-tooltip="Додати" class="button add">Додати</button>
+                </div>
+                <div class="items-list">
+                    <template id="product-template">
+                        <div class="element-of-list">
+                            <div class="name-cell">
+                                <span data-class="edit-mode" id="name" class="name">None</span>
+                            </div>
+                            <div class="central-cell">
+                                <button data-tooltip="Зменшити" id="minus" class="button round minus red">-</button>
+                                <div class="quantity-counter">1</div>
+                                <button data-tooltip="Збільшити" id="plus" class="button round plus green">+</button>
+                            </div>
+                            <div class="right-cell">
+                                <button data-tooltip="Додати до куплено" class="button bought">Куплено</button>
+                                <button data-tooltip="Видалити" class="button red delete-button">&#10006</button>
+                            </div>
+                        </div>
+                    </template>
+                </div>
             </div>
-            <div class="products">
-                <div class="left-column">Помідори</div>
-                <div class="central-column">
-                    <button class="round red minus"> - </button>
-                    <span class="quantity-square"> 1 </span>
-                    <button class="round green"> + </button>
-                </div>
-                <div class="right-column">
-                    <button class="buy">Куплено</button>
-                    <button class="delete red">×</button>
-                </div>
-            </div>
-            <div class="products"><div class="left-column">Печиво</div>
-                <div class="central-column">
-                    <button class="round red minus"> - </button>
-                    <span class="quantity-square"> 1 </span>
-                    <button class="round green"> + </button>
-                </div>
-                <div class="right-column">
-                    <button class="buy">Куплено</button>
-                    <button class="delete red">×</button>
-                </div></div>
-            <div class="products"><div class="left-column">Сир</div>
-                <div class="central-column">
-                    <button class="round red minus"> - </button>
-                    <span class="quantity-square"> 1 </span>
-                    <button class="round green"> + </button>
-                </div>
-                <div class="right-column">
-                    <button class="buy">Куплено</button>
-                    <button class="delete red">×</button>
-                </div></div>
         </div>
     </div>
 </div>
+<div class="budge"><span class="buylist">Buy List</span>
+    <span class="created">Created by: Kirill Kundik</span></div>
+<script type="text/javascript" src="jquery-3.2.1.js"></script>
+<script type="text/javascript" src="main.js"></script>
 </body>
 </html>
