@@ -271,7 +271,7 @@ p {
 }
 
 .button.minus {
-    background-color: red;
+    background-color: #ff6149;
     color: white;
     font-weight: 900;
     font-size: 12px;
@@ -282,7 +282,7 @@ p {
 }
 
 .minus:active {
-    background-color: #ca553f;
+    background-color: #ff6149;
 }
 
 .quantity-counter {
